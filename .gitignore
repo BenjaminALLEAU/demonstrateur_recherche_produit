@@ -1,0 +1,11 @@
+# Ignorer tous les fichiers CSV...
+*.csv
+
+# ...sauf stopwords.csv
+!stopwords.csv
+
+# Ignorer tous les notebooks Jupyter
+*.ipynb
+
+# Ignorer le dossier du virtualenv (venv)
+venv/
