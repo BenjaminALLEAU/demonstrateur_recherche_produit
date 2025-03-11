@@ -118,7 +118,7 @@ with st.sidebar:
     nb_resultats = st.slider("Nombre de résultats à afficher", 5, 100, 20)
     
     # Seuil de score minimum
-    seuil_score = st.slider("Seuil de score minimum", 0, 100, 10)
+    seuil_score = st.slider("Seuil de score minimum", 0, 300, 10)
     
     # Poids des colonnes
     st.subheader("Poids des colonnes")
@@ -227,7 +227,7 @@ if requete and df is not None and len(colonnes_recherche) > 0:
                         help="Score de pertinence de 0 à 100",
                         format="%.1f",
                         min_value=0,
-                        max_value=100,
+                        max_value=400,
                     ),
                     "Code Pièce": st.column_config.TextColumn(
                         "Code Pièce",
