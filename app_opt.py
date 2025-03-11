@@ -186,8 +186,6 @@ if requete and df is not None and len(colonnes_recherche) > 0:
             poids_colonnes if 'poids_colonnes' in locals() else None
         )
         
-        st.caption(f"Requête nettoyée: **{requete_nettoyee}**")
-        
         # Affichage des résultats
         st.subheader(f"Résultats de recherche ({len(resultats)} trouvés)")
         

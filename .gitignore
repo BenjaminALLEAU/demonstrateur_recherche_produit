@@ -1,5 +1,6 @@
 # Ignorer tous les fichiers CSV...
 *.csv
+*.xlsx
 
 # ...sauf stopwords.csv
 !stopwords.csv
