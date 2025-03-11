@@ -10,3 +10,5 @@
 
 # Ignorer le dossier du virtualenv (venv)
 venv/
+app.py
+moteur_recherche.py

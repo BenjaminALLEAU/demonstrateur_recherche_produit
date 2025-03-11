@@ -196,9 +196,12 @@ if requete and df is not None and len(colonnes_recherche) > 0:
             
             if "Famille" in resultats.columns:
                 colonnes_affichage.append("Famille")
+                
+            if "Section" in resultats.columns:
+                colonnes_affichage.append("Section")
             
-            if "Prix" in resultats.columns:
-                colonnes_affichage.append("Prix")
+            # if "Prix" in resultats.columns:
+            #     colonnes_affichage.append("Prix")
             
             # Ajouter la colonne de score à l'affichage
             #colonnes_affichage.append("Score")
@@ -210,8 +213,8 @@ if requete and df is not None and len(colonnes_recherche) > 0:
             df_affichage["Score"] = resultats["score_global"]
             
             # Formater les prix
-            if "Prix" in df_affichage.columns:
-                df_affichage["Prix"] = df_affichage["Prix"].apply(lambda x: f"{x:.2f} €" if pd.notna(x) else "")
+            # if "Prix" in df_affichage.columns:
+            #     df_affichage["Prix"] = df_affichage["Prix"].apply(lambda x: f"{x:.2f} €" if pd.notna(x) else "")
             
             # Afficher le tableau avec des options interactives
             st.markdown("<div class='dataframe-container'>", unsafe_allow_html=True)
@@ -232,11 +235,11 @@ if requete and df is not None and len(colonnes_recherche) > 0:
                         help="Référence de la pièce",
                         width="medium",
                     ),
-                    "Prix": st.column_config.TextColumn(
-                        "Prix",
-                        help="Prix en euros",
-                        width="small",
-                    ),
+                    # "Prix": st.column_config.TextColumn(
+                    #     "Prix",
+                    #     help="Prix en euros",
+                    #     width="small",
+                    # ),
                 },
                 hide_index=True,
                 width=None,  # Pleine largeur
