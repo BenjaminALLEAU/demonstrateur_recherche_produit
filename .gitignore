@@ -1,14 +1,19 @@
-# Ignorer tous les fichiers CSV...
+# Ignorer tous les fichiers
 *.csv
 *.xlsx
-
-# ...sauf stopwords.csv
-!stopwords.csv
-
-# Ignorer tous les notebooks Jupyter
+*.py
+*.spec
 *.ipynb
 
-# Ignorer le dossier du virtualenv (venv)
+
+# ...sauf ceux qui sont explicitement listés
+!stopwords.csv
+!app_opt.py
+!moteur_recherche_optimise.py
+
+# Ignorer les dossiers
+build/
+dist/
+__pycache__/
+*.egg-info/
 venv/
-app.py
-moteur_recherche.py
